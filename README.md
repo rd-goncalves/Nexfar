@@ -1,0 +1,14 @@
+# Projeto Nexfar - Raphael Gonçalves
+
+## Executando projeto:
+
+- Realize o download do projeto do repositório
+- execute o comando `npm install` para instalar as dependências
+- então, execute o comando `npm start` para rodar o app em modo desenvolvimento.
+- acesse [http://localhost:3000] para ver o projeto em execução no navegador.
+
+## Dificuldades enfrentadas:
+
+- Alguns alinhamentos com Grid e Flexbox.
+- Map do Array de itens
+- Análise de como seria o State do carrinho e produtos
