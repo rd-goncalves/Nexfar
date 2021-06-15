@@ -8,7 +8,7 @@ export default function Header() {
 
   return (
     <HeaderContent>
-      <img src="/Nexfar.png" alt="Nexfar" />
+      <img src={process.env.PUBLIC_URL + "/Nexfar.png"} />
       <div>
         <span>NEXFAR</span>
         <div id="CartInfos">
