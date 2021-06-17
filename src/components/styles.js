@@ -178,6 +178,30 @@ export const ProductContainer = styled.div`
   }
 `;
 
+export const RightSidebarContent = styled.div`
+  background: var(--primaryBg);
+  padding: 1rem;
+  min-width: 12rem;
+  grid-column: 3 / 3;
+  height: calc(100vh - 5rem);
+  border-left: 2px solid lightgray;
+
+  li {
+    height: 23px;
+  }
+
+  h4 {
+    color: var(--purple);
+    margin-bottom: 5px;
+    margin-top: 15px;
+  }
+
+  span {
+    margin-left: 5px;
+    font-size: 12px;
+  }
+`;
+
 //ContentBox
 export const StyledBox = styled.div`
   background: var(--white);

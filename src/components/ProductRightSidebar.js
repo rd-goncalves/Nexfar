@@ -1,5 +1,5 @@
 import React from "react";
-import { RightSidebarContent } from "../pages/ProductList/styles";
+import { RightSidebarContent } from "./styles";
 
 export default function ProductRightSidebar() {
   return (
@@ -7,54 +7,40 @@ export default function ProductRightSidebar() {
       <h4>AÇÕES COMERCIAIS</h4>
       <ul>
         <li>
-          <label>
-            <input type="checkbox" />
-            <span>EM PROMOÇÃO</span>
-          </label>
+          <input type="checkbox" />
+          <span>EM PROMOÇÃO</span>
         </li>
         <li>
-          <label>
-            <input type="checkbox" />
-            <span>EM OFERTA</span>
-          </label>
+          <input type="checkbox" />
+          <span>EM OFERTA</span>
         </li>
       </ul>
 
       <h4>ESTOQUE</h4>
       <ul>
         <li>
-          <label>
-            <input type="checkbox" />
-            <span>ESTOQUE DISPONÍVEL</span>
-          </label>
+          <input type="checkbox" />
+          <span>ESTOQUE DISPONÍVEL</span>
         </li>
       </ul>
 
       <h4>CATEGORIAS</h4>
       <ul>
         <li>
-          <label>
-            <input type="checkbox" />
-            <span>GENÉRICOS</span>
-          </label>
+          <input type="checkbox" />
+          <span>GENÉRICOS</span>
         </li>
         <li>
-          <label>
-            <input type="checkbox" />
-            <span>SIMILARES</span>
-          </label>
+          <input type="checkbox" />
+          <span>SIMILARES</span>
         </li>
         <li>
-          <label>
-            <input type="checkbox" />
-            <span>PSICOTRÓPICOS</span>
-          </label>
+          <input type="checkbox" />
+          <span>PSICOTRÓPICOS</span>
         </li>
         <li>
-          <label>
-            <input type="checkbox" />
-            <span>HIGIENE E BELEZA</span>
-          </label>
+          <input type="checkbox" />
+          <span>HIGIENE E BELEZA</span>
         </li>
       </ul>
     </RightSidebarContent>
