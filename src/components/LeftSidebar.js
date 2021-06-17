@@ -14,15 +14,12 @@ export default function LeftSidebar() {
   return (
     <LeftSidebarContent>
       <CompanyInfos>
-        <i className="fas fa-store" style={{ fontSize: "2rem" }} />
+        <i className="fas fa-store" />
         <div>
-          <div id="company-name">{company.name}</div>
+          <div className="company-name">{company.name}</div>
           <div>{company.cpnj}</div>
         </div>
-        <i
-          className="fas fa-chevron-right"
-          style={{ fontSize: "1.5rem", alignContent: "flex-end" }}
-        />
+        <i className="fas fa-chevron-right" />
       </CompanyInfos>
 
       <Menu />

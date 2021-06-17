@@ -106,16 +106,18 @@ export default function Product({ item }) {
               </td>
               <td>R$ {itemTotal}</td>
               <td>
-                <i className="far fa-trash-alt delete" onClick={removeItem}></i>
+                {itemQty > 0 && (
+                  <i className="far fa-trash-alt delete" onClick={removeItem} />
+                )}
               </td>
             </tr>
           </tbody>
         </table>
         <div className="Infos">
-          <Info background="var(--lightgray)" color="var(--black)">
+          <Info background="var(--primaryBg)" color="var(--black)">
             {item.category}
           </Info>
-          <Info background="var(--lightgray)" color="var(--black)">
+          <Info background="var(--primaryBg)" color="var(--black)">
             {item.maker}
           </Info>
         </div>

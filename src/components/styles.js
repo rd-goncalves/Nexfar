@@ -9,6 +9,7 @@ export const HeaderContent = styled.header`
   justify-content: space-between;
   padding: 2rem 4rem;
   border-bottom: 3px solid var(--lightgreen);
+  cursor: pointer;
 
   img {
     height: 2.5rem;
@@ -35,8 +36,8 @@ export const GreenText = styled.span`
 
 export const LeftSidebarContent = styled.div`
   background: var(--white);
-  padding: 1rem;
-  width: 17.5rem;
+  /* padding: 1rem; */
+  width: 100%;
   grid-column: 1/1;
   height: calc(100vh - 5rem);
 `;
@@ -44,8 +45,8 @@ export const LeftSidebarContent = styled.div`
 export const CompanyInfos = styled.div`
   display: flex;
   align-items: center;
-  padding-bottom: 1rem;
-  padding-right: 1rem;
+  padding: 1rem;
+  width: 100%;
   font-size: 14px;
   font-weight: 400;
 
@@ -54,32 +55,51 @@ export const CompanyInfos = styled.div`
     flex: 1;
   }
 
-  #company-name {
+  .fa-store {
+    font-size: 24px;
+  }
+
+  .company-name {
     font-weight: 600;
   }
 `;
 
+export const MenuContainer = styled.ul`
+  width: 100%;
+  padding-left: 20px;
+`;
+
 export const MenuGroup = styled.ul`
-  padding: 0.5rem 1rem;
+  padding-bottom: 10px;
 `;
 
 export const MenuTitle = styled.li`
   font-weight: 600;
+  padding-bottom: 5px;
 `;
 
 export const MenuItem = styled.li`
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: 500;
+  color: lightgray;
+  /* padding: 5px; */
 
-  padding: 4px;
-
-  span {
-    margin-left: 5px;
+  i {
+    width: 35px;
+    padding: 12px 0 12px 10px;
+    margin-left: 6px;
   }
 
   a {
     cursor: pointer;
     text-decoration: none;
     color: var(--lightgreen);
+  }
+
+  .Selected-Menu {
+    background-color: var(--primaryBg);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
   }
 `;
 
@@ -89,13 +109,13 @@ export const ProductContainer = styled.div`
   border-radius: 15px;
   width: calc(100% - 2rem);
   max-width: 1000px;
-  min-width: 710px;
+  min-width: 590px;
   margin: 1rem;
   padding: 1rem;
 
   .Header {
     height: 2rem;
-    border-bottom: 2px solid var(--lightgray);
+    border-bottom: 2px solid var(--primaryBg);
     margin-bottom: 10px;
 
     h4 {
@@ -125,7 +145,7 @@ export const ProductContainer = styled.div`
 
     table {
       grid-column: 5 / -1;
-      border-bottom: 1px solid var(--lightgray);
+      border-bottom: 1px solid var(--primaryBg);
     }
   }
   .Infos {
@@ -169,7 +189,7 @@ export const StyledBox = styled.div`
 
   header {
     height: 2rem;
-    border-bottom: 1px solid var(--lightgray);
+    border-bottom: 1px solid var(--primaryBg);
     margin-bottom: 10px;
 
     span {

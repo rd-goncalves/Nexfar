@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CartContainer = styled.div`
-  background-color: var(--lightgray);
+  background-color: var(--primaryBg);
   grid-column: 2 / -1;
   height: calc(100vh - 8rem);
 `;
@@ -40,7 +40,7 @@ export const CartBody = styled.div`
 `;
 export const CartProducts = styled.div`
   grid-column: 1 / 1;
-  background-color: var(--lightgray);
+  background-color: var(--primaryBg);
   width: 600px;
   height: 300px;
   display: flex;
@@ -51,7 +51,7 @@ export const CartProducts = styled.div`
 
 export const CartValues = styled.div`
   grid-column: 2 / 2;
-  background-color: var(--lightgray);
+  background-color: var(--primaryBg);
   width: 300px;
   height: 150px;
 
@@ -61,7 +61,7 @@ export const CartValues = styled.div`
 
 export const CartCustomer = styled.div`
   grid-column: 1 / 1;
-  background-color: var(--lightgray);
+  background-color: var(--primaryBg);
   width: 600px;
   height: 250px;
   display: flex;
