@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Nexfar/static/css/main.a2e20f1c.chunk.css",
-    "main.js": "/Nexfar/static/js/main.aee6ac84.chunk.js",
-    "main.js.map": "/Nexfar/static/js/main.aee6ac84.chunk.js.map",
+    "main.css": "/Nexfar/static/css/main.f3c4b1c0.chunk.css",
+    "main.js": "/Nexfar/static/js/main.95c61291.chunk.js",
+    "main.js.map": "/Nexfar/static/js/main.95c61291.chunk.js.map",
     "runtime-main.js": "/Nexfar/static/js/runtime-main.60f906d2.js",
     "runtime-main.js.map": "/Nexfar/static/js/runtime-main.60f906d2.js.map",
-    "static/js/2.a62b4bdd.chunk.js": "/Nexfar/static/js/2.a62b4bdd.chunk.js",
-    "static/js/2.a62b4bdd.chunk.js.map": "/Nexfar/static/js/2.a62b4bdd.chunk.js.map",
+    "static/js/2.3523780e.chunk.js": "/Nexfar/static/js/2.3523780e.chunk.js",
+    "static/js/2.3523780e.chunk.js.map": "/Nexfar/static/js/2.3523780e.chunk.js.map",
     "index.html": "/Nexfar/index.html",
-    "static/css/main.a2e20f1c.chunk.css.map": "/Nexfar/static/css/main.a2e20f1c.chunk.css.map",
-    "static/js/2.a62b4bdd.chunk.js.LICENSE.txt": "/Nexfar/static/js/2.a62b4bdd.chunk.js.LICENSE.txt"
+    "static/css/main.f3c4b1c0.chunk.css.map": "/Nexfar/static/css/main.f3c4b1c0.chunk.css.map",
+    "static/js/2.3523780e.chunk.js.LICENSE.txt": "/Nexfar/static/js/2.3523780e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.60f906d2.js",
-    "static/js/2.a62b4bdd.chunk.js",
-    "static/css/main.a2e20f1c.chunk.css",
-    "static/js/main.aee6ac84.chunk.js"
+    "static/js/2.3523780e.chunk.js",
+    "static/css/main.f3c4b1c0.chunk.css",
+    "static/js/main.95c61291.chunk.js"
   ]
 }
