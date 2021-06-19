@@ -7,7 +7,7 @@ export const CartContainer = styled.div`
 `;
 
 export const CartHeader = styled.div`
-  grid-column: 1 / -1;
+  grid-column: 2 / -1;
   height: 3rem;
   justify-content: space-between;
   align-items: center;

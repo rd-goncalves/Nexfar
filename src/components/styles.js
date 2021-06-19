@@ -36,7 +36,6 @@ export const GreenText = styled.span`
 
 export const LeftSidebarContent = styled.div`
   background: var(--white);
-  /* padding: 1rem; */
   width: 100%;
   grid-column: 1/1;
   height: calc(100vh - 5rem);
@@ -82,7 +81,6 @@ export const MenuItem = styled.li`
   font-size: 14px;
   font-weight: 500;
   color: lightgray;
-  /* padding: 5px; */
 
   i {
     width: 35px;
@@ -105,13 +103,16 @@ export const MenuItem = styled.li`
 
 export const ProductContainer = styled.div`
   grid-column: 1 / 8;
-  background: var(--white);
   border-radius: 15px;
-  width: calc(100% - 2rem);
   max-width: 1000px;
-  min-width: 590px;
+  min-width: 610px;
   margin: 1rem;
   padding: 1rem;
+
+  ${({ active }) =>
+    active
+      ? `background: var(--white);`
+      : `background: var(--disabledProduct);`}
 
   .Header {
     height: 2rem;
@@ -159,6 +160,9 @@ export const ProductContainer = styled.div`
     width: 100px;
     text-align: center;
   }
+  .ProductQty {
+    width: 140px;
+  }
 
   button,
   i {
@@ -171,16 +175,22 @@ export const ProductContainer = styled.div`
   .minus,
   .delete {
     color: var(--pink);
+    :disabled {
+      color: gray;
+    }
   }
 
   .plus {
     color: var(--lightgreen);
+    :disabled {
+      color: gray;
+    }
   }
 `;
 
 export const RightSidebarContent = styled.div`
   background: var(--primaryBg);
-  padding: 1rem;
+  padding: 0.3rem 0 0 1rem;
   min-width: 12rem;
   grid-column: 3 / 3;
   height: calc(100vh - 5rem);

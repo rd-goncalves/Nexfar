@@ -1,74 +1,31 @@
-import React, { useContext, useState } from "react";
-import { CartContext } from "../contexts/CartContext";
+import React from "react";
 import { ProductContainer, Info } from "./styles";
+import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
+import { InputAdornment } from "@material-ui/core";
+import useProductState from "../hooks/useProductState";
 
-export default function Product({ item }) {
-  const [itemQty, setItemQty] = useState(0);
-  const [itemTotal, setItemTotal] = useState(0);
-  const { addCartItem, removeCartItem, shoppingCart } = useContext(CartContext);
-
-  const cartItem = {
-    id: item.id,
-    sku: item.sku,
-    barcode: item.barcode,
-    name: item.name,
-    maker: item.maker,
-    category: item.category,
-    principle: item.principle,
-    base: item.base,
-    validUntil: item.validUntil,
-    imageURL: item.imageURL,
-    qty: 1,
-    price: item.price.price,
-    total: item.price.price,
-  };
-
-  function addItem(amount) {
-    addCartItem(cartItem, amount);
-    setItemQty(getItemAmount(item.id));
-    setItemTotal(getItemValue(item.id));
-  }
-
-  function removeItem() {
-    removeCartItem(item.id);
-    setItemQty(getItemAmount(item.id));
-    setItemTotal(getItemValue(item.id));
-  }
-
-  function getItemAmount(id) {
-    let amount = 0;
-
-    shoppingCart.items.forEach((product) => {
-      if (product.id === id) {
-        amount = product.qty;
-      }
-    });
-
-    return amount;
-  }
-
-  function getItemValue(id) {
-    let total = 0;
-
-    shoppingCart.items.forEach((product) => {
-      if (product.id === id) {
-        total = product.total;
-      }
-    });
-    return total;
-  }
+export default function Product({ product }) {
+  const [
+    productQty,
+    handleChange,
+    handleBlur,
+    reset,
+    addOne,
+    subtractOne,
+    editProduct,
+  ] = useProductState(product.qty);
 
   return (
-    <ProductContainer>
+    <ProductContainer active={product.quantityAvailable > 0}>
       <div className="Header">
         <Info background="var(--brown)" color="var(--white)">
-          {item.sku}
+          {product.sku}
         </Info>
-        <h4>{item.name}</h4>
+        <h4>{product.name}</h4>
       </div>
       <div className="Content">
         <div className="imgContainer">
-          <img src={item.imageURL} alt={item.name} />
+          <img src={product.imageURL} alt={product.name} />
         </div>
         <table>
           <tbody>
@@ -80,34 +37,58 @@ export default function Product({ item }) {
             </tr>
             <tr>
               <td>
-                <div>{item.base}</div>
-                <div>R$ {item.price.price}</div>
+                <div>{product.base}</div>
+                <div>R$ {product.price.price}</div>
               </td>
               <td>
-                {item.quantityAvailable > 0
-                  ? `${item.quantityAvailable} un`
+                {product.quantityAvailable > 0
+                  ? `${product.quantityAvailable} un`
                   : "sem estoque"}
               </td>
-              <td>
+              <td className="ProductQty">
                 <button
                   className="fas fa-minus-circle minus"
-                  onClick={() => addItem(-1)}
-                  disabled={itemQty === 0}
+                  onClick={() => subtractOne(product)}
+                  disabled={productQty === 0 || productQty === ""}
+                  tabIndex="-1"
                 ></button>
-                <span>{itemQty} un</span>
+
+                <ValidatorForm
+                  onSubmit={() => editProduct(product.id, productQty)}
+                  style={{ display: "inline-block", padding: "0 2px 0 2px" }}
+                >
+                  <TextValidator
+                    value={productQty}
+                    onChange={handleChange}
+                    onBlur={() => handleBlur(product)}
+                    validators={["minNumber:0"]}
+                    errorMessages={["Quantidade inválida."]}
+                    InputProps={{
+                      endAdornment: (
+                        <InputAdornment position="end">un</InputAdornment>
+                      ),
+                    }}
+                    style={{ width: "68px" }}
+                    disabled={product.quantityAvailable === 0}
+                  />
+                </ValidatorForm>
                 <button
                   className="fas fa-plus-circle plus"
-                  onClick={() => addItem(1)}
+                  onClick={() => addOne(product)}
                   disabled={
-                    item.quantityAvailable === 0 ||
-                    itemQty >= item.quantityAvailable
+                    product.quantityAvailable === 0 ||
+                    productQty >= product.quantityAvailable
                   }
+                  tabIndex="-1"
                 ></button>
               </td>
-              <td>R$ {itemTotal}</td>
+              <td>R$ {product.total}</td>
               <td>
-                {itemQty > 0 && (
-                  <i className="far fa-trash-alt delete" onClick={removeItem} />
+                {product.qty > 0 && (
+                  <i
+                    className="far fa-trash-alt delete"
+                    onClick={() => reset(product)}
+                  />
                 )}
               </td>
             </tr>
@@ -115,10 +96,10 @@ export default function Product({ item }) {
         </table>
         <div className="Infos">
           <Info background="var(--primaryBg)" color="var(--black)">
-            {item.category}
+            {product.category}
           </Info>
           <Info background="var(--primaryBg)" color="var(--black)">
-            {item.maker}
+            {product.maker}
           </Info>
         </div>
       </div>

@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import { HeaderContent, GreenText, CartButton } from "./styles";
-import { CartContext } from "../contexts/CartContext";
+import { ProductContext } from "../contexts/ProductContext";
 import { useHistory } from "react-router-dom";
 
 export default function Header() {
   let history = useHistory();
-  const { cartTotal } = useContext(CartContext);
+  const { productsTotal } = useContext(ProductContext);
 
   function goToCart() {
     history.push("/cart");
@@ -18,7 +18,7 @@ export default function Header() {
         <span>NEXFAR</span>
         <div id="CartInfos">
           <CartButton className="fas fa-shopping-cart"></CartButton>
-          <GreenText fontSize={18}>R$ {cartTotal}</GreenText>
+          <GreenText fontSize={18}>R$ {productsTotal}</GreenText>
         </div>
         <span>Pedido Mínimo: R$ 150,00</span>
       </div>

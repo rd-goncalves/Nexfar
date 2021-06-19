@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { CartContext } from "../../contexts/CartContext";
+import { ProductContext } from "../../contexts/ProductContext";
 import ContentBox from "../../components/ContentBox";
 import { Link } from "react-router-dom";
 import {
@@ -15,7 +16,8 @@ import {
 import { Info } from "../../components/styles";
 
 export default function Cart() {
-  const { shoppingCart, removeAllItems, cartTotal } = useContext(CartContext);
+  const { shoppingCart } = useContext(CartContext);
+  const { productsTotal, removeAllProducts } = useContext(ProductContext);
 
   return (
     <CartContainer>
@@ -28,7 +30,7 @@ export default function Cart() {
         </Link>
         <div
           style={{ display: "flex", cursor: "pointer", color: "var(--pink)" }}
-          onClick={removeAllItems}
+          onClick={removeAllProducts}
         >
           <span>LIMPAR CARRINHO</span>
           <i className="far fa-trash-alt"></i>
@@ -65,7 +67,7 @@ export default function Cart() {
             >
               <span style={{ fontSize: "12px" }}>Total:</span>
               <span style={{ fontSize: "16px", fontWeight: "500" }}>
-                R$ {cartTotal}
+                R$ {productsTotal}
               </span>
             </div>
           </ContentBox>

@@ -8,6 +8,8 @@ const seedProducts = [
     category: "ALIMENTOS E SUPLEMENTOS",
     principle: "VITAMINA B7 (BIOTINA)",
     base: "Nexfar",
+    qty: 0,
+    total: 0,
     price: {
       price: 16.92,
       finalPrice: 16.92,
@@ -30,6 +32,8 @@ const seedProducts = [
     category: "ALIMENTOS E SUPLEMENTOS",
     principle: "WHEY PROTEIN",
     base: "Nexfar",
+    qty: 0,
+    total: 0,
     price: {
       price: 45.79,
       finalPrice: 45.79,
@@ -52,6 +56,8 @@ const seedProducts = [
     category: "COSMÉTICOS",
     principle: "ACIDO HIALURONICO+ASSOCIACOES",
     base: "Nexfar",
+    qty: 0,
+    total: 0,
     price: {
       price: 9.99,
       finalPrice: 9.99,
@@ -74,6 +80,8 @@ const seedProducts = [
     category: "ALIMENTOS E SUPLEMENTOS",
     principle: "EXTRATO DE PROPOLIS",
     base: "Nexfar",
+    qty: 0,
+    total: 0,
     price: {
       price: 16.28,
       finalPrice: 16.28,
@@ -96,6 +104,8 @@ const seedProducts = [
     category: "ALIMENTOS E SUPLEMENTOS",
     principle: "ZINCO",
     base: "Nexfar",
+    qty: 0,
+    total: 0,
     price: {
       price: 12.99,
       finalPrice: 12.99,
@@ -118,6 +128,8 @@ const seedProducts = [
     category: "ALIMENTOS E SUPLEMENTOS",
     principle: "ZINCO",
     base: "Nexfar",
+    qty: 0,
+    total: 0,
     price: {
       price: 6.56,
       finalPrice: 6.56,
@@ -141,6 +153,8 @@ const seedProducts = [
     principle:
       "OLEOS DE:ARGAN/NOZ KARITE/SEM.ALGOD/COCO/MACADAMIA/CHA VER/CAMOMILA/ALOE V/CALAMO/MIRRA/OLIVA/CANELA",
     base: "Nexfar",
+    qty: 0,
+    total: 0,
     price: {
       price: 59.6,
       finalPrice: 59.6,
@@ -163,6 +177,8 @@ const seedProducts = [
     category: "SIMILARES",
     principle: "CLORETO DE SODIO",
     base: "Nexfar",
+    qty: 0,
+    total: 0,
     price: {
       price: 2.65,
       finalPrice: 2.65,
@@ -185,6 +201,8 @@ const seedProducts = [
     category: "SIMILARES",
     principle: "CLORETO DE SODIO",
     base: "Nexfar",
+    qty: 0,
+    total: 0,
     price: {
       price: 2.19,
       finalPrice: 2.19,
@@ -207,6 +225,8 @@ const seedProducts = [
     category: "SIMILARES",
     principle: "CLORETO DE SODIO",
     base: "Nexfar",
+    qty: 0,
+    total: 0,
     price: {
       price: 1.71,
       finalPrice: 1.71,
@@ -229,6 +249,8 @@ const seedProducts = [
     category: "COSMÉTICOS",
     principle: "EXTRATOS GENGIBRE/SALVIA/TILIA",
     base: "Nexfar",
+    qty: 0,
+    total: 0,
     price: {
       price: 29.8,
       finalPrice: 29.8,
@@ -251,6 +273,8 @@ const seedProducts = [
     category: "COSMÉTICOS",
     principle: "SERICINA+YACON+EXTRATO DE BAMBU",
     base: "Nexfar",
+    qty: 0,
+    total: 0,
     price: {
       price: 32.7,
       finalPrice: 32.7,
@@ -273,6 +297,8 @@ const seedProducts = [
     category: "COSMÉTICOS",
     principle: "SERICINA+YACON+EXTRATO DE BAMBU",
     base: "Nexfar",
+    qty: 0,
+    total: 0,
     price: {
       price: 32.7,
       finalPrice: 32.7,
@@ -295,6 +321,8 @@ const seedProducts = [
     category: "ALIMENTOS E SUPLEMENTOS",
     principle: "VITAMINAS C/D+ZINCO",
     base: "Nexfar",
+    qty: 0,
+    total: 0,
     price: {
       price: 13.68,
       finalPrice: 13.68,
@@ -317,6 +345,8 @@ const seedProducts = [
     category: "ALIMENTOS E SUPLEMENTOS",
     principle: "VITAMINA E",
     base: "Nexfar",
+    qty: 0,
+    total: 0,
     price: {
       price: 9.93,
       finalPrice: 9.93,
@@ -339,6 +369,8 @@ const seedProducts = [
     category: "ALIMENTOS E SUPLEMENTOS",
     principle: "VITAMINA D+ZINCO",
     base: "Nexfar",
+    qty: 0,
+    total: 0,
     price: {
       price: 46.38,
       finalPrice: 46.38,
