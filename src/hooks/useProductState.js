@@ -28,8 +28,10 @@ const useProductState = (initialVal) => {
 
   const handleBlur = (product) => {
     if (qty > 0 && qty <= product.quantityAvailable) {
+      setQty(qty);
       editProduct(product.id, qty);
     } else {
+      setQty(0);
       editProduct(product.id, 0);
     }
   };

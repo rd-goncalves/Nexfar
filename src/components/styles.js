@@ -36,7 +36,7 @@ export const GreenText = styled.span`
 
 export const LeftSidebarContent = styled.div`
   background: var(--white);
-  width: 100%;
+  width: 15rem;
   grid-column: 1/1;
   height: calc(100vh - 5rem);
 `;
@@ -81,6 +81,7 @@ export const MenuItem = styled.li`
   font-size: 14px;
   font-weight: 500;
   color: lightgray;
+  cursor: not-allowed;
 
   i {
     width: 35px;
@@ -108,11 +109,7 @@ export const ProductContainer = styled.div`
   min-width: 610px;
   margin: 1rem;
   padding: 1rem;
-
-  ${({ active }) =>
-    active
-      ? `background: var(--white);`
-      : `background: var(--disabledProduct);`}
+  background: var(--white);
 
   .Header {
     height: 2rem;
@@ -128,7 +125,6 @@ export const ProductContainer = styled.div`
   .Content {
     display: grid;
     grid-template-columns: repeat(23, 1fr);
-    /* background: blue; */
     padding-top: 1rem;
 
     .imgContainer {
@@ -147,44 +143,118 @@ export const ProductContainer = styled.div`
     table {
       grid-column: 5 / -1;
       border-bottom: 1px solid var(--primaryBg);
+      height: 120px;
+      padding-bottom: 20px;
+
+      th {
+        color: var(--gray);
+        font-size: 14px;
+        font-weight: 400;
+      }
+      .BaseHeader {
+        padding-left: 20px;
+        text-align: left;
+      }
+      td {
+        width: 100px;
+        text-align: center;
+      }
+
+      .BaseContent {
+        padding-left: 20px;
+        text-align: left;
+
+        div:first-of-type {
+          font-size: 13px;
+        }
+
+        div:last-of-type {
+          font-weight: 500;
+        }
+      }
+
+      .inStockContent {
+        font-size: 15px;
+      }
+
+      .outOfStockContent {
+        display: flex;
+        font-size: 10px;
+        align-items: center;
+
+        div {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      .TotalContent {
+        font-weight: 500;
+      }
+
+      .TrashcanContent {
+        width: 60px;
+        text-align: right;
+      }
     }
   }
-  .Infos {
-    margin-left: 26px;
-    grid-column: 4 / -1;
-    height: 2rem;
-    padding-top: 0.5rem;
-  }
 
-  td {
-    width: 100px;
-    text-align: center;
-  }
   .ProductQty {
     width: 140px;
+
+    div {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .MuiInputBase-input {
+    text-align: center;
   }
 
   button,
   i {
     background: none;
     cursor: pointer;
-    font-size: 1.2rem;
-    padding: 4px;
+    font-size: 24px;
+    padding: 6px 10px 0 10px;
     border: none;
   }
-  .minus,
-  .delete {
+  .fa-warehouse {
+    font-size: 16px;
+    color: var(--gray);
+  }
+
+  .fa-mobile {
+    font-size: 20px;
+    padding: 0 10px 0 10px;
+  }
+
+  .fa-minus-circle {
     color: var(--pink);
     :disabled {
       color: gray;
+      pointer-events: none;
     }
   }
 
-  .plus {
+  .fa-plus-circle {
     color: var(--lightgreen);
     :disabled {
       color: gray;
+      pointer-events: none;
     }
+  }
+
+  .fa-trash-alt {
+    color: var(--pink);
+    font-size: 20px;
+  }
+
+  .Footer {
+    margin-left: 26px;
+    grid-column: 4 / -1;
+    height: 2rem;
+    padding-top: 0.5rem;
   }
 `;
 
@@ -243,8 +313,8 @@ export const Info = styled.span`
   background: ${(props) => props.background};
   border-radius: 20px;
   color: ${(props) => props.color};
-  font-size: 12px;
-  font-weight: 300;
+  font-size: ${(props) => (props.fontSize ? `${props.fontSize}px` : "12px")};
+  font-weight: ${(props) => (props.bold ? 500 : 300)};
   margin: 5px;
   padding: 0.3rem 0.8rem 0.3rem 0.8rem;
 `;

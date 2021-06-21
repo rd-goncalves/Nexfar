@@ -9,14 +9,11 @@ export default function ProductList() {
 
   return (
     <ProductListContainer>
-      {/* SearchBar goes here */}
-
       <ProductListProducts>
         {products.map((product) => (
           <Product product={product} key={product.id} />
         ))}
       </ProductListProducts>
-
       <ProductRightSidebar />
     </ProductListContainer>
   );
