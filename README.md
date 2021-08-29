@@ -9,6 +9,4 @@
 
 ## Dificuldades enfrentadas:
 
-- Alguns alinhamentos com Grid e Flexbox.
-- Map do Array de itens
 - Análise de como seria o State do carrinho e produtos
